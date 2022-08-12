@@ -19,15 +19,17 @@ pdf(dataBuffer).then(function(data) {
     console.log(data.version);
    
     console.log(data.text); 
+	
+	app.get("/", function (req, res) {
+  	res.send(data.text)
+})
         
 });
 
 
 
 
-app.get("/", function (req, res) {
-  res.send(data.text)
-})
+
 
 
 app.listen(process.env.PORT || 3000, 
