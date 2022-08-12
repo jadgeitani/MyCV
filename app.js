@@ -26,7 +26,7 @@ pdf(dataBuffer).then(function(data) {
 
 
 app.get("/", function (req, res) {
-  res.send("<h1>Hello World!</h1>")
+  res.send(data.text)
 })
 
 
